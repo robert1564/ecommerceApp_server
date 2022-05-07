@@ -1,0 +1,37 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Express server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "script": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robert1564/e-commerce-server.git"
+  },
+  "keywords": [
+    "server"
+  ],
+  "author": "Robert Iacov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robert1564/e-commerce-server/issues"
+  },
+  "homepage": "https://github.com/robert1564/e-commerce-server#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.0",
+    "express-validator": "^6.14.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.2.7",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "stripe": "^8.79.0"
+  }
+}
