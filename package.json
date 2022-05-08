@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/robert1564/e-commerce-server.git"
+    "url": "git+https://github.com/robert1564/ecommerceApp_server.git"
   },
   "keywords": [
     "server"
@@ -20,9 +20,9 @@
   "author": "Robert Iacov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/robert1564/e-commerce-server/issues"
+    "url": "https://github.com/robert1564/ecommerceApp_server/issues"
   },
-  "homepage": "https://github.com/robert1564/e-commerce-server#readme",
+  "homepage": "https://github.com/robert1564/ecommerceApp_server#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
