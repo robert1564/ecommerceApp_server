@@ -3,12 +3,12 @@ services:
   - docker
 
 before_install:
-  - docker build -t robertiacov/server -f Dockerfile.dev .
+  - docker build -t robertiacov/server_server -f Dockerfile.dev .
 
 before_script: chmod 0777 ./node_modules/.bin/mocha
 
 script:
-  - docker run robertiacov/server npm test -- --coverage
+  - docker run robertiacov/server_server npm test -- --coverage
 
 # after_sucess:
 #   #decript environment variables
