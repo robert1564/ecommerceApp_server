@@ -10,7 +10,7 @@ app.use(cors());
 app.use(morgan("dev"))
 // connect to mongoDB
 connectDB();
-console.log("test")
+console.log("testsss")
 // define routes and API
 app.use(express.json({extended:false}));
 app.use("/api/users", require("./routes/userApi"));
