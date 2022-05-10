@@ -3,7 +3,6 @@ services:
   - docker
 
 before_install:
-  - gem install bundler --pre
   - docker build -t robertiacov/server_server -f Dockerfile.dev .
 
 before_script: chmod 0777 ./node_modules/.bin/mocha
@@ -11,7 +10,7 @@ before_script: chmod 0777 ./node_modules/.bin/mocha
 script:
   - docker run robertiacov/server_server npm test -- --coverage
 
-# after_sucess:
+after_sucess:
 #   #decript environment variables
 #   - openssl enc -aes256 -d -in .enc -out .env -k $SECRET_KEY
 #   #descript service account
@@ -28,10 +27,10 @@ script:
 #   - gcloud config set project eshop-292223
 #   - gcloud config set compute/zone us-west2-a
 
-#   #build production grade dockerfile
-#   - docker build -t robertiacov/server .
-#   - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_ID" --password-stdin
-#   - docker push robertiacov/server
+  #build production grade dockerfile
+  - docker build -t robertiacov/server_server .
+  - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_ID" --password-stdin
+  - docker push robertiacov/server_server
 
 #   #deploy to gcp
 #   - bash ./deploy.sh
