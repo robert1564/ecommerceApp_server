@@ -3,6 +3,7 @@ services:
   - docker
 
 before_install:
+  - gem install bundler --pre
   - docker build -t robertiacov/server_server -f Dockerfile.dev .
 
 before_script: chmod 0777 ./node_modules/.bin/mocha
