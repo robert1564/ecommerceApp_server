@@ -8,27 +8,27 @@ before_install:
 script:
   - docker run robertiacov/server npm test -- --coverage
 
-after_sucess:
-  #decript environment variables
-  - openssl enc -aes256 -d -in .enc -out .env -k $SECRET_KEY
-  #descript service account
-  - openssl enc -aes256 -d -in serviceAccount.json.enc -out serviceAccount.json -k $SERVICE_KEY
+# after_sucess:
+#   #decript environment variables
+#   - openssl enc -aes256 -d -in .enc -out .env -k $SECRET_KEY
+#   #descript service account
+#   - openssl enc -aes256 -d -in serviceAccount.json.enc -out serviceAccount.json -k $SERVICE_KEY
 
-  # install gcp sdk , delete old ones
-  - if [ ! -d "$HOME/google-cloud-sdk/bin" ]; then rm -rf $HOME/google-cloud-sdk; export CLOUDSDK_CORE_DISABLE_PROMPTS=1; curl https://sdk.cloud.google.com | bash; fi
+#   # install gcp sdk , delete old ones
+#   - if [ ! -d "$HOME/google-cloud-sdk/bin" ]; then rm -rf $HOME/google-cloud-sdk; export CLOUDSDK_CORE_DISABLE_PROMPTS=1; curl https://sdk.cloud.google.com | bash; fi
 
-  - source /home/travis/google-cloud-sdk/path.bash.inc
-  #get google authorization
-  - gcloud auth activate-service-account --key-file serviceAccount.json
+#   - source /home/travis/google-cloud-sdk/path.bash.inc
+#   #get google authorization
+#   - gcloud auth activate-service-account --key-file serviceAccount.json
 
-  #set up project
-  - gcloud config set project eshop-292223
-  - gcloud config set compute/zone us-west2-a
+#   #set up project
+#   - gcloud config set project eshop-292223
+#   - gcloud config set compute/zone us-west2-a
 
-  #build production grade dockerfile
-  - docker build -t robertiacov/server .
-  - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_ID" --password-stdin
-  - docker push robertiacov/server
+#   #build production grade dockerfile
+#   - docker build -t robertiacov/server .
+#   - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_ID" --password-stdin
+#   - docker push robertiacov/server
 
-  #deploy to gcp
-  - bash ./deploy.sh
+#   #deploy to gcp
+#   - bash ./deploy.sh
