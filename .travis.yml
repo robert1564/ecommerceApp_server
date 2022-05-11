@@ -10,7 +10,7 @@ before_install:
 before_script: chmod 0555 ./node_modules/.bin/nyc
 
 script:
-  - docker run -e CI=true robertiacov/server npm test -- --coverage
+  - docker run robertiacov/server npm test -- --coverage
 
 # after_sucess:
 #   #decript environment variables
