@@ -2,7 +2,7 @@ sudo: required
 services:
   - docker
 
-chmod 0777 ./node_modules/.bin/mocha
+before_script: chmod 0777 ./node_modules/.bin/mocha
 
 before_install:
   - docker build -t robertiacov/server -f Dockerfile.dev .
