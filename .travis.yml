@@ -1,13 +1,10 @@
 sudo: required
-sudo: chown -R $(whoami) ~/.npm
+
 services:
   - docker
 
-
 before_install:
   - docker build -t robertiacov/server -f Dockerfile.dev .
-
-before_script: chmod 0555 ./node_modules/.bin/nyc
 
 script:
   - docker run robertiacov/server npm test -- --coverage
