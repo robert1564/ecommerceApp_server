@@ -10,8 +10,8 @@ script:
   - docker run robertiacov/server npm test -- --coverage
 
 after_sucess:
-#   #decript environment variables
-#   - openssl enc -aes256 -d -in .enc -out .env -k $SECRET_KEY
+  #decript environment variables
+  - openssl enc -aes256 -d -in .enc -out .env -k $SECRET_KEY
 #   #descript service account
 #   - openssl enc -aes256 -d -in serviceAccount.json.enc -out serviceAccount.json -k $SERVICE_KEY
 
