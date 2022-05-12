@@ -4,10 +4,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t robertiacov/server -f Dockerfile.dev .
+  - docker build -t robertiacov/server_new -f Dockerfile.dev .
 
 script:
-  - docker run robertiacov/server npm test -- --coverage
+  - docker run robertiacov/server_new npm test -- --coverage
 
 after_sucess:
 #   #decript environment variables
@@ -27,9 +27,9 @@ after_sucess:
 #   - gcloud config set compute/zone us-west2-a
 
 #build production grade dockerfile
-  - docker build -t robertiacov/server .
+  - docker build -t robertiacov/server_new .
   - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_ID" --password-stdin
-  - docker push robertiacov/server
+  - docker push robertiacov/server_new
 
 #   #deploy to gcp
 #   - bash ./deploy.sh
