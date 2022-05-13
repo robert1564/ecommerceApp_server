@@ -20,8 +20,6 @@ after_sucess:
 
   - source /home/travis/google-cloud-sdk/path.bash.inc
 
-  - gcloud auth login
-
   #get google authorization
   - gcloud auth activate-service-account --key-file serviceAccount.json
 
