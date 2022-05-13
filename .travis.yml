@@ -21,7 +21,7 @@ after_sucess:
   - source /home/travis/google-cloud-sdk/path.bash.inc
 
   #get google authorization
-  - gcloud auth activate-service-account --key-file serviceAccount.json
+  - gcloud auth login activate-service-account --key-file serviceAccount.json
 
   #set up project
   - gcloud config set project named-haven-350008
