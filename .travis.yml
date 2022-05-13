@@ -20,7 +20,7 @@ after_sucess:
 
   - source /home/travis/google-cloud-sdk/path.bash.inc
 
-  - $ gcloud config set account robertiacov156@gmail.com
+  - gcloud config set account robertiacov156@gmail.com
 
   #get google authorization
   - gcloud auth activate-service-account --key-file serviceAccount.json
