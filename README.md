@@ -9,7 +9,8 @@ Database:
 Front-End:
   - React and Redux
 
-Stages of development:
+## Stages of development:
+
   - Back-End side:
       - creating request and response objects;
       - creating asynchronous functions;
@@ -17,11 +18,11 @@ Stages of development:
       - route creation;
       - JWT (JSON Web Token) for authentication;
       - middleware to secure requests that was sent to server;
-      - developing several APIs to control various requests, e.g: post request for creating a new user, get request for displaying products on the page, patch for updating the shopping cart, and much more;
+      - developing several APIs to control various requests, e.g: post request for creating a new user, get request for displaying products on the page, patch for             updating the shopping cart, and much more;
           - I will develop and model these APIs using good practices;
       - secure connection of the back-end with the front-end using different call protocols;
 
-Devops tools:
+### Devops tools:
   - Stripe API, for consuming payment APIs from various third-party services;
   - Create a secure CI pipeline (continuous integration) to Google Cloud Platform using Travis CI;
   - Using the Google Cloud app engine;
@@ -30,7 +31,7 @@ Devops tools:
   - CI deployment to Docker Ops;
   - Creating different containers for client and server in Docker Hub;
 
-App features:
+### App features:
   - Possibility to create / authenticate a new user;
   - Possibilities to operate the site in different ways depending on the type of user admin / user;
   - The admin will have at his disposal a dashboard in which he can view the income he has accumulated, 
