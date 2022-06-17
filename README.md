@@ -42,5 +42,5 @@ Front-End:
   - Possibility to purchase products using a shopping card
   - All card payments will go directly to the Stripe account where the admin will be able to view the orders made
 
-Documentation in progress (English):
+### Documentation in progress (English):
 [Aplicatie Ecommerce.pdf](https://github.com/robert1564/ecommerceApp_server/files/8925989/Aplicatie.Ecommerce.pdf)
