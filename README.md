@@ -2,8 +2,10 @@
 
 Back-End:
   - NodeJS and ExpressJS
+
 Database:
   - MongoDB
+
 Front-End:
   - React and Redux
 
